@@ -1,4 +1,4 @@
-# 🔎 HTTP Log Analysis and Web Attack Detection Using Splunk
+# HTTP Log Analysis and Web Attack Detection Using Splunk-project
 
 ## 📌 Project Overview
 This project demonstrates a SOC Analyst L1–level use case for analyzing HTTP logs using Splunk SIEM. The objective is to ingest structured HTTP JSON logs and use SPL (Search Processing Language) queries to detect suspicious web traffic and common web attack patterns such as SQL Injection, XSS, scanning behavior, and abnormal data transfer.
@@ -55,7 +55,7 @@ index=http_lab sourcetype=_json
 ```
 Screenshot:![Image Alt](https://github.com/nileshmethri/HTTP-Log-Analysis-and-Web-Attack-Detection-Using-Splunk/blob/63cf9f8b4efd36bfbb62d0d0dace8b59bc3a3f79/http-t1.png)
 
-🚨 2️⃣ SQL Injection Attempt Detection
+## 2️⃣ SQL Injection Attempt Detection
 Description:
 Detects possible SQL injection attacks by searching for common SQL keywords and payload patterns inside URL parameters.
 ```spl
@@ -65,17 +65,17 @@ index=http_lab sourcetype=_json
 ```
 Screenshot:![Image Alt](https://github.com/nileshmethri/HTTP-Log-Analysis-and-Web-Attack-Detection-Using-Splunk/blob/d4cc8df5175b5912a76da44adc7f7c37a7e7bb26/http-t2.png)
 
-⚠️ 3️⃣ XSS Attempt Detection
+## 3️⃣ XSS Attempt Detection
 Description:
 Finds cross-site scripting attempts where attackers try to inject JavaScript into URL parameters.
 ```spl
 index=http_lab sourcetype=_json
-| search uri="*<script>*" OR uri="*alert(*"
+| search uri="*<script>*" OR uri="*alert*"
 | table _time src_ip uri status
 ```
-Screenshot:
+Screenshot:![Image Alt](https://github.com/nileshmethri/HTTP-Log-Analysis-and-Web-Attack-Detection-Using-Splunk/blob/d61aec391f3b67366ddb1b5cf5096abda1565454/http-t3.png)
 
-🤖 4️⃣ Malicious Tool User-Agent Detection
+## 4️⃣ Malicious Tool User-Agent Detection
 Description:
 Identifies requests coming from known attack or automation tools by analyzing the User-Agent field.
 ```spl
@@ -85,7 +85,7 @@ index=http_lab sourcetype=_json
 ```
 Screenshot:![Image Alt]()
 
-❌ 5️⃣ High Error Code Activity — Scanning / Abuse Indicator
+## 5️⃣ High Error Code Activity — Scanning / Abuse Indicator
 Description:
 Shows IPs generating many error responses (401/403/404/500). High error rates often indicate brute force attempts, directory scanning, or malformed attack requests.
 ```spl
@@ -95,7 +95,7 @@ index=http_lab sourcetype=_json status>=400
 ```
 Screenshot:![Image Alt]()
 
-📦 6️⃣ Large Data Transfer — Possible Exfiltration
+## 6️⃣ Large Data Transfer — Possible Exfiltration
 Description:
 Calculates total data transferred per source IP. Helps detect possible data exfiltration or suspicious large downloads/uploads.
 ```spl
