@@ -83,7 +83,7 @@ index=http_lab sourcetype=_json
 | search user_agent="*sqlmap*" OR user_agent="*nikto*" OR user_agent="*curl*" OR user_agent="*python*"
 | stats count by src_ip user_agent
 ```
-Screenshot:![Image Alt]()
+Screenshot:![Image Alt](https://github.com/nileshmethri/HTTP-Log-Analysis-and-Web-Attack-Detection-Using-Splunk/blob/8cdcede761f6aa2b67ea09717097c6d5d04e7bdb/http-t4.png)
 
 ## 5️⃣ High Error Code Activity — Scanning / Abuse Indicator
 Description:
