@@ -1,7 +1,7 @@
 # HTTP Log Analysis and Web Attack Detection Using Splunk-project
 
 ## 📌 Project Overview
-This project demonstrates a SOC Analyst L1–level use case for analyzing HTTP logs using Splunk SIEM. The objective is to ingest structured HTTP JSON logs and use SPL (Search Processing Language) queries to detect suspicious web traffic and common web attack patterns such as SQL Injection, XSS, scanning behavior, and abnormal data transfer.
+This project demonstrates a SOC Analyst use case for analyzing HTTP logs using Splunk SIEM. The objective is to ingest structured HTTP JSON logs and use SPL (Search Processing Language) queries to detect suspicious web traffic and common web attack patterns such as SQL Injection, XSS, scanning behavior, and abnormal data transfer.
 
 The project focuses on practical log analysis and detection query development aligned with real SOC monitoring tasks.
 
@@ -104,5 +104,8 @@ index=http_lab sourcetype=_json
 | sort -total_bytes
 ```
 Screenshot:![Image Alt](https://github.com/nileshmethri/HTTP-Log-Analysis-and-Web-Attack-Detection-Using-Splunk/blob/0a0763db25f5cd9b5335f6dd2a276dc56f0261d7/http-t6.png)
+
+## Conclusion
+This project demonstrated practical SOC Analyst skills by ingesting and analyzing HTTP logs in Splunk and developing SPL queries to detect suspicious web activity. Through structured log analysis, multiple attack patterns such as SQL injection, XSS, scanning behavior, malicious user-agents, and abnormal traffic volumes were successfully identified. The project highlights hands-on experience with SIEM-based monitoring, SPL query development, and security-focused log investigation, aligning with real-world SOC Analyst detection and analysis tasks.
 
 
