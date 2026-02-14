@@ -93,7 +93,7 @@ index=http_lab sourcetype=_json status>=400
 | stats count by src_ip status
 | sort -count
 ```
-Screenshot:![Image Alt]()
+Screenshot:![Image Alt](https://github.com/nileshmethri/HTTP-Log-Analysis-and-Web-Attack-Detection-Using-Splunk/blob/febf214c61d9d695434e5639ff4900771f904c2b/http-t5.png)
 
 ## 6️⃣ Large Data Transfer — Possible Exfiltration
 Description:
