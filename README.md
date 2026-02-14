@@ -103,6 +103,6 @@ index=http_lab sourcetype=_json
 | stats sum(bytes) as total_bytes by src_ip
 | sort -total_bytes
 ```
-Screenshot:![Image Alt]()
+Screenshot:![Image Alt](https://github.com/nileshmethri/HTTP-Log-Analysis-and-Web-Attack-Detection-Using-Splunk/blob/0a0763db25f5cd9b5335f6dd2a276dc56f0261d7/http-t6.png)
 
 
