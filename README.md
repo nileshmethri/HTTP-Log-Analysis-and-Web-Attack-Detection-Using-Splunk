@@ -63,7 +63,7 @@ index=http_lab sourcetype=_json
 | search uri="*OR 1=1*" OR uri="*UNION*" OR uri="*SELECT*"
 | table _time src_ip method uri status user_agent
 ```
-Screenshot:![Image Alt]()
+Screenshot:![Image Alt](https://github.com/nileshmethri/HTTP-Log-Analysis-and-Web-Attack-Detection-Using-Splunk/blob/d4cc8df5175b5912a76da44adc7f7c37a7e7bb26/http-t2.png)
 
 ⚠️ 3️⃣ XSS Attempt Detection
 Description:
